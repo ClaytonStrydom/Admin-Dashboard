@@ -16,7 +16,7 @@ const Geography = () => {
         mt="40px"
         height="75vh"
         border={`1px solid ${theme.palette.secondary[200]}`}
-        borderRadius="4px"
+        borderRadius="5px"
       >
         {data ? (
           <ResponsiveChoropleth
@@ -73,7 +73,7 @@ const Geography = () => {
                 translateX: 0,
                 translateY: -125,
                 itemsSpacing: 0,
-                itemWidth: 94,
+                itemWidth: 93,
                 itemHeight: 18,
                 itemDirection: "left-to-right",
                 itemTextColor: theme.palette.secondary[200],
