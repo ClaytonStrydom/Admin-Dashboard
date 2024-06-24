@@ -1,12 +1,26 @@
 import mongoose from "mongoose";
 
 const OverallStatSchema = new mongoose.Schema({
-    name: String,
-    price: Number,
-    description: String,
-    category: String,
-    rating: Number,
-    supply: Number,
+    productId: String,
+    yearlySalesTotal: Number,
+    yearlyTotalSoldUnits: Number,
+    year: Number,
+    monthlyData: [
+        {
+            month: String,
+            totalSales: Number,
+            totalUnits: Number,
+        },
+    ],
+    dailyUnits: {
+        date: String,
+        totalSales: Number,
+        totalUnits: Number,
+    },
+    salesByCategory: {
+        type: Map,
+        of: Number,
+    }
 },
 { timestamps: true }
 );
